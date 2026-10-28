@@ -1,0 +1,179 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Seblak Mantul – Pesan Sekarang</title>
+<link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  color-scheme:dark;
+  --bg1:#5a0a0a; --bg2:#b3200f; --card:rgba(40,6,6,.78); --line:rgba(255,200,140,.28);
+  --text:#fff3e0; --muted:#ffcf9f; --accent:#ffb300; --hot:#ff3d1f; --field:rgba(255,255,255,.09);
+  box-sizing:border-box; padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+*,*:before,*:after{box-sizing:inherit}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{
+  margin:0; min-height:100vh; color:var(--text); font-family:'Poppins',system-ui,sans-serif;
+  background-color:var(--bg1);
+  background-image:
+    radial-gradient(ellipse at 20% 0%,rgba(255,140,0,.45),transparent 55%),
+    radial-gradient(ellipse at 90% 100%,rgba(255,40,10,.5),transparent 55%),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 200 200'%3E%3Cg opacity='.55'%3E%3Cpath d='M20 40c20-18 45-10 52 8 4 10-6 14-12 8-8-9-22-9-40 0z' fill='%23e8200c'/%3E%3Cpath d='M20 40l-8-6' stroke='%232e7d32' stroke-width='4' stroke-linecap='round'/%3E%3Ccircle cx='140' cy='50' r='24' fill='%23f3c77d'/%3E%3Ccircle cx='132' cy='44' r='3' fill='%23c58b3a'/%3E%3Ccircle cx='148' cy='58' r='3' fill='%23c58b3a'/%3E%3Ccircle cx='146' cy='40' r='2' fill='%23c58b3a'/%3E%3Cpath d='M30 130c14-22 26 22 40 0s26 22 40 0' fill='none' stroke='%23ffd56b' stroke-width='6' stroke-linecap='round'/%3E%3Cpath d='M40 150c14-22 26 22 40 0' fill='none' stroke='%23ffe9a8' stroke-width='5' stroke-linecap='round'/%3E%3Ccircle cx='150' cy='140' r='16' fill='%23fff1d6'/%3E%3Ccircle cx='150' cy='140' r='7' fill='%23ffb300'/%3E%3Cellipse cx='110' cy='95' rx='9' ry='4' fill='%236d4c41' transform='rotate(30 110 95)'/%3E%3Cpath d='M175 95l12-10 4 14z' fill='%2343a047'/%3E%3C/g%3E%3C/svg%3E");
+  background-attachment:fixed;
+}
+body:before{content:"";position:fixed;inset:0;background:linear-gradient(180deg,rgba(40,0,0,.55),rgba(90,10,10,.35) 40%,rgba(30,0,0,.7));pointer-events:none;z-index:0}
+.wrap{position:relative;z-index:1;max-width:680px;margin:0 auto;padding:28px 16px 48px}
+header{text-align:center;margin-bottom:18px}
+.bowl{width:150px;height:auto}
+.steam path{stroke:#fff;stroke-linecap:round;fill:none;opacity:0;animation:steam 3s infinite}
+.steam path:nth-child(2){animation-delay:.8s}.steam path:nth-child(3){animation-delay:1.6s}
+@keyframes steam{0%{opacity:0;transform:translateY(8px)}40%{opacity:.7}100%{opacity:0;transform:translateY(-14px)}}
+h1{font-family:'Lilita One','Poppins',sans-serif;font-weight:400;font-size:clamp(2.3rem,9vw,3.4rem);margin:4px 0 0;letter-spacing:1px;color:var(--accent);text-shadow:0 3px 0 #b3200f,0 6px 18px rgba(0,0,0,.6)}
+.tag{margin:4px 0 0;color:var(--muted);font-size:.95rem}
+.card{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:24px 20px;backdrop-filter:blur(8px);box-shadow:0 20px 50px rgba(0,0,0,.5)}
+.row{margin-bottom:18px}
+.lbl{display:block;font-weight:600;margin-bottom:7px;color:var(--muted);font-size:.92rem}
+input[type=text],textarea,select{width:100%;padding:12px 14px;border-radius:12px;border:1px solid var(--line);background:var(--field);color:var(--text);font:inherit;outline:none}
+select option{color:#222}
+input[type=text]:focus,textarea:focus,select:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(255,179,0,.25)}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip input{position:absolute;opacity:0;pointer-events:none}
+.chip span{display:inline-block;padding:8px 14px;border-radius:999px;border:1px solid var(--line);background:var(--field);cursor:pointer;font-size:.9rem;transition:.15s}
+.chip input:checked+span{background:var(--accent);color:#3b0a00;border-color:var(--accent);font-weight:600;transform:scale(1.05)}
+.chip input:focus-visible+span{outline:2px solid #fff}
+.lvl span{font-size:.9rem}
+.lvl input:checked+span{background:var(--hot);color:#fff;border-color:#ff8a65}
+button{width:100%;padding:14px;border:0;border-radius:14px;font:inherit;font-family:'Lilita One',sans-serif;font-size:1.3rem;letter-spacing:.5px;color:#fff;cursor:pointer;background:linear-gradient(135deg,#ff6f00,#e8200c);box-shadow:0 8px 22px rgba(232,32,12,.5);transition:.15s}
+button:hover{transform:translateY(-2px)}
+#hasil{display:none;margin-top:18px;padding:16px;border-radius:16px;background:rgba(255,179,0,.14);border:1px dashed var(--accent);line-height:1.6}
+#hasil b{color:var(--accent)}
+footer{text-align:center;margin-top:18px;color:var(--muted);font-size:.8rem}
+.chip small{opacity:.75;font-size:.75rem;margin-left:2px}
+.total{margin:4px 0 18px;padding:14px 16px;border-radius:16px;background:rgba(255,179,0,.12);border:1px solid var(--accent)}
+.total ul{list-style:none;margin:0 0 10px;padding:0;font-size:.88rem;color:var(--muted)}
+.total li{display:flex;justify-content:space-between;gap:12px;padding:2px 0}
+.total .sum{display:flex;justify-content:space-between;align-items:center;border-top:1px dashed var(--line);padding-top:10px;font-weight:600}
+.total .sum b{font-family:'Lilita One',sans-serif;font-weight:400;font-size:1.6rem;color:var(--accent)}
+@media(min-width:600px){.card{padding:30px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <svg class="bowl" viewBox="0 0 160 120" aria-hidden="true">
+      <g class="steam" stroke-width="4"><path d="M55 40q-8-10 0-20"/><path d="M80 38q-8-10 0-20"/><path d="M105 40q-8-10 0-20"/></g>
+      <path d="M20 58h120c0 36-26 56-60 56S20 94 20 58z" fill="#d32f2f" stroke="#ffcc80" stroke-width="4"/>
+      <ellipse cx="80" cy="58" rx="60" ry="10" fill="#ff7043"/>
+      <path d="M40 58c8-8 14 8 22 0s14 8 22 0 14 8 22 0" fill="none" stroke="#ffe082" stroke-width="5" stroke-linecap="round"/>
+      <circle cx="62" cy="55" r="6" fill="#fff3e0"/><circle cx="102" cy="56" r="5" fill="#f3c77d"/>
+      <path d="M118 52l10-5 2 7z" fill="#43a047"/>
+    </svg>
+    <h1>SEBLAK MANTUL</h1>
+    <p class="tag">Pedasnya bikin nagih, kuahnya bikin rindu 🌶️</p>
+  </header>
+
+  <div class="card">
+    <form id="f">
+      <div class="row">
+        <label class="lbl" for="nama">👤 Nama Lengkap</label>
+        <input id="nama" type="text" placeholder="Contoh: Budi Santoso" required>
+      </div>
+      <div class="row">
+        <label class="lbl" for="telp">📞 Nomor Telepon</label>
+        <input id="telp" type="text" inputmode="tel" placeholder="08xxxxxxxxxx" required>
+      </div>
+      <div class="row">
+        <label class="lbl" for="alamat">📍 Alamat</label>
+        <textarea id="alamat" rows="3" placeholder="Alamat pengantaran" required></textarea>
+      </div>
+      <div class="row">
+        <label class="lbl" for="tipe">🍜 Tipe Seblak</label>
+        <select id="tipe">
+          <option>Banjir</option><option>Nyemek</option><option>Kering</option><option>Goreng</option>
+        </select>
+      </div>
+      <div class="row">
+        <span class="lbl">🔥 Level Pedas</span>
+        <div class="chips lvl" id="level">
+          <label class="chip"><input type="radio" name="lv" value="Level 1" checked><span>🌶️ 1</span></label>
+          <label class="chip"><input type="radio" name="lv" value="Level 2"><span>🌶️ 2</span></label>
+          <label class="chip"><input type="radio" name="lv" value="Level 3"><span>🌶️ 3</span></label>
+          <label class="chip"><input type="radio" name="lv" value="Level 4"><span>🌶️ 4</span></label>
+          <label class="chip"><input type="radio" name="lv" value="Level 5"><span>🌶️ 5</span></label>
+        </div>
+      </div>
+      <div class="row">
+        <span class="lbl">🧆 Topping</span>
+        <div class="chips" id="top">
+          <label class="chip"><input type="checkbox" value="Kerupuk"><span>Kerupuk</span></label>
+          <label class="chip"><input type="checkbox" value="Aci"><span>Aci</span></label>
+          <label class="chip"><input type="checkbox" value="Telur"><span>Telur</span></label>
+          <label class="chip"><input type="checkbox" value="Bakso"><span>Bakso</span></label>
+          <label class="chip"><input type="checkbox" value="Cuangki"><span>Cuangki</span></label>
+          <label class="chip"><input type="checkbox" value="Jamur Enoki"><span>Jamur Enoki</span></label>
+          <label class="chip"><input type="checkbox" value="Sayur"><span>Sayur</span></label>
+          <label class="chip"><input type="checkbox" value="Dumpling"><span>Dumpling</span></label>
+          <label class="chip"><input type="checkbox" value="Sosis"><span>Sosis</span></label>
+          <label class="chip"><input type="checkbox" value="Ceker"><span>Ceker</span></label>
+        </div>
+      </div>
+      <div class="total" aria-live="polite">
+        <ul id="rincian"></ul>
+        <div class="sum"><span>Total Harga</span><b id="total">Rp0</b></div>
+      </div>
+      <button type="submit">PESAN SEKARANG 🔥</button>
+    </form>
+    <div id="hasil" role="status"></div>
+  </div>
+  <footer>© Seblak Mantul · Dibuat dengan cinta & cabai</footer>
+</div>
+<script>
+var HARGA_TIPE={Banjir:15000,Nyemek:13000,Kering:12000,Goreng:14000};
+var HARGA_TOP={Kerupuk:2000,Aci:3000,Telur:4000,Bakso:4000,Cuangki:3000,'Jamur Enoki':4000,Sayur:2000,Dumpling:5000,Sosis:3000,Ceker:5000};
+var rp=function(n){return 'Rp'+n.toLocaleString('id-ID')};
+[].forEach.call(document.querySelectorAll('#tipe option'),function(o){o.value=o.textContent;o.textContent=o.value+' – '+rp(HARGA_TIPE[o.value])});
+[].forEach.call(document.querySelectorAll('#top .chip'),function(c){var v=c.querySelector('input').value;c.querySelector('span').innerHTML=v+' <small>+'+rp(HARGA_TOP[v])+'</small>'});
+function items(){
+  var t=document.getElementById('tipe').value;
+  var r=[['Seblak '+t,HARGA_TIPE[t]]];
+  [].forEach.call(document.querySelectorAll('#top input:checked'),function(i){r.push(['Topping '+i.value,HARGA_TOP[i.value]])});
+  return r;
+}
+function hitung(){
+  var r=items(),tot=0,html='';
+  r.forEach(function(x){tot+=x[1];html+='<li><span>'+x[0]+'</span><span>'+rp(x[1])+'</span></li>'});
+  document.getElementById('rincian').innerHTML=html;
+  document.getElementById('total').textContent=rp(tot);
+  return tot;
+}
+function rincianHTML(){return items().map(function(x){return x[0]+': '+rp(x[1])}).join('<br>')}
+document.getElementById('f').addEventListener('change',hitung);
+hitung();
+document.getElementById('f').addEventListener('submit',function(e){
+  e.preventDefault();
+  var esc=function(s){return s.replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})};
+  var tops=[].slice.call(document.querySelectorAll('#top input:checked')).map(function(i){return i.value});
+  var lv=document.querySelector('input[name=lv]:checked').value;
+  var h=document.getElementById('hasil');
+  h.innerHTML='<b>Pesanan diterima! 🎉</b><br>Atas nama <b>'+esc(document.getElementById('nama').value)+'</b> ('+esc(document.getElementById('telp').value)+')<br>'+
+    'Seblak <b>'+document.getElementById('tipe').value+'</b>, '+lv+'<br>Topping: '+(tops.length?esc(tops.join(', ')):'tanpa topping')+
+    '<br>Dikirim ke: '+esc(document.getElementById('alamat').value)+'<br><br>'+rincianHTML()+'<br><b>Total bayar: '+rp(hitung())+'</b>';
+  h.style.display='block';
+  h.scrollIntoView({behavior:'smooth',block:'nearest'});
+});
+</script>
+</body>
+</html>
+
+</body>
+</html>
